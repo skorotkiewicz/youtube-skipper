@@ -8,6 +8,7 @@ const YouTubeSkipper = () => {
   const [skips, setSkips] = useState([{ start: "", end: "" }]);
   const [debug, setDebug] = useState("");
   const [share, setShare] = useState("");
+  const [tooltipVisible, setTooltipVisible] = useState(false);
   const playerRef = useRef(null);
   const navigate = useNavigate();
   const location = useLocation();
@@ -96,6 +97,16 @@ const YouTubeSkipper = () => {
     }
   };
 
+  const handleCopy = () => {
+    const valueToCopy = `${window.location.origin}${window.location.pathname}/${share}`;
+    navigator.clipboard.writeText(valueToCopy).then(() => {
+      setTooltipVisible(true);
+      setTimeout(() => {
+        setTooltipVisible(false);
+      }, 1500);
+    });
+  };
+
   return (
     <div className="youtube-skipper">
       <h1>YouTube Video Skipper</h1>
@@ -151,13 +162,18 @@ const YouTubeSkipper = () => {
       )}
       <div className="share-link">
         <p>Share this link:</p>
-        <input
-          type="text"
-          readOnly
-          value={`${window.location.host}/${share}`}
-        />
-        {/* <input type="text" readOnly value={window.location.href} /> */}
+
+        <div className="tooltip-container">
+          <input
+            type="text"
+            readOnly
+            value={`${window.location.origin}${window.location.pathname}/${share}`}
+            onClick={handleCopy}
+          />
+          {tooltipVisible && <div className="tooltip">Copied!</div>}
+        </div>
       </div>
+
       <div className="debug">
         <p>Debug info: {debug}</p>
       </div>

@@ -107,3 +107,24 @@
     }
   }
 }
+
+.tooltip-container {
+  position: relative;
+  // display: inline-block;
+}
+
+.tooltip {
+  visibility: visible;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
