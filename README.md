@@ -2,6 +2,8 @@
 
 YouTube Skipper is a web application that enhances your YouTube viewing experience by automatically skipping specified segments of a video.
 
+[Demo](https://sekor.eu.org/youtube-skipper/?v=8CdKgnErqQM&skip=0%3A05-0%3A10&skip=0%3A15-0%3A20&skip=0%3A25-0%3A30&skip=0%3A35-0%3A40)
+
 ## Features
 
 - **Automatic Skipping**: Define segments of a YouTube video to skip, and the app will automatically skip those parts during playback.
