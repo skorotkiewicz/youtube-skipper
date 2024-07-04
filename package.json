@@ -2,6 +2,7 @@
   "name": "youtube",
   "private": true,
   "version": "1.0.0",
+  "homepage": "https://skorotkiewicz.github.io/youtube-skipper",
   "scripts": {
     "build": "rsbuild build",
     "check": "biome check --write",
