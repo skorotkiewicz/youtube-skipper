@@ -177,6 +177,15 @@ const YouTubeSkipper = () => {
       <div className="debug">
         <p>Debug info: {debug}</p>
       </div>
+
+      <div className="footer">
+        <a
+          href="https://github.com/skorotkiewicz/youtube-skipper"
+          target="_blank"
+        >
+          GitHub
+        </a>
+      </div>
     </div>
   );
 };
