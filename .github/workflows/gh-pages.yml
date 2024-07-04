@@ -15,11 +15,13 @@ jobs:
 
       - name: Install and Build
         run: |
-          npm install
-          npm run build
+          yarn install
+          yarn build
+          yarn export
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
+        if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
