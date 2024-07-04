@@ -98,7 +98,7 @@ const YouTubeSkipper = () => {
   };
 
   const handleCopy = () => {
-    const valueToCopy = `${window.location.origin}${window.location.pathname}/${share}`;
+    const valueToCopy = `${window.location.origin}${window.location.pathname}${share}`;
     navigator.clipboard.writeText(valueToCopy).then(() => {
       setTooltipVisible(true);
       setTimeout(() => {
@@ -167,7 +167,7 @@ const YouTubeSkipper = () => {
           <input
             type="text"
             readOnly
-            value={`${window.location.origin}${window.location.pathname}/${share}`}
+            value={`${window.location.origin}${window.location.pathname}${share}`}
             onClick={handleCopy}
           />
           {tooltipVisible && <div className="tooltip">Copied!</div>}
