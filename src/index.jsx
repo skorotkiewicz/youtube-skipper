@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
-import { Routes, Route, Outlet, Link } from "react-router-dom";
+import { BrowserRouter, HashRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import Video from "./pages/Video";
 import About from "./pages/About";
@@ -11,7 +10,7 @@ import "./YouTubeSkipper.scss";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/youtube-skipper">
       <Routes>
         <Route index element={<App />} />
         <Route path="video" element={<Video />} />
