@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 import YouTube from "react-youtube";
-import "./../YouTubeSkipper.scss";
 import { timeToSeconds } from "../helpers";
 
 const Video = () => {

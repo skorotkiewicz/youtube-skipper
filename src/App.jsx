@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from "react";
 import YouTube from "react-youtube";
 import { useNavigate, useLocation } from "react-router-dom";
 import { timeToSeconds } from "./helpers";
-import "./YouTubeSkipper.scss";
 
 const YouTubeSkipper = () => {
   const [videoId, setVideoId] = useState("");
