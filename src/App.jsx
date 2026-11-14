@@ -98,13 +98,19 @@ const YouTubeSkipper = () => {
   };
 
   const handleCopy = () => {
-    const valueToCopy = `${window.location.origin}${window.location.pathname}${share}`;
+    const valueToCopy = getShareLink();
     navigator.clipboard.writeText(valueToCopy).then(() => {
       setTooltipVisible(true);
       setTimeout(() => {
         setTooltipVisible(false);
       }, 1500);
     });
+  };
+
+  const getShareLink = () => {
+    const pathname = window.location.pathname;
+    const basePath = pathname.endsWith("/") ? pathname : `${pathname}/`;
+    return `${window.location.origin}${basePath}${share}`;
   };
 
   return (
@@ -167,7 +173,7 @@ const YouTubeSkipper = () => {
           <input
             type="text"
             readOnly
-            value={`${window.location.origin}${window.location.pathname}${share}`}
+            value={getShareLink()}
             onClick={handleCopy}
           />
           {tooltipVisible && <div className="tooltip">Copied!</div>}
