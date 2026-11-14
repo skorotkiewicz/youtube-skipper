@@ -109,10 +109,7 @@ const YouTubeSkipper = () => {
 
   const getShareLink = () => {
     const pathname = window.location.pathname;
-    const basePath =
-      share.startsWith("video/") && !pathname.endsWith("/")
-        ? `${pathname}/`
-        : pathname;
+    const basePath = pathname.endsWith("/") ? pathname : `${pathname}/`;
     return `${window.location.origin}${basePath}${share}`;
   };
 
