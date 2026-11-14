@@ -124,7 +124,7 @@ const YouTubeSkipper = () => {
       {skips.map((skip, index) => (
         <div key={index} className="skip-input">
           <label>
-            Skip Start (MM:SS):
+            Skip Start (MM:SS or HH:MM:SS):
             <input
               type="text"
               value={skip.start}
@@ -133,7 +133,7 @@ const YouTubeSkipper = () => {
             />
           </label>
           <label>
-            Skip End (MM:SS):
+            Skip End (MM:SS or HH:MM:SS):
             <input
               type="text"
               value={skip.end}
