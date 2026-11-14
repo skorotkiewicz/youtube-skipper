@@ -13,7 +13,7 @@ YouTube Skipper is a web application that enhances your YouTube viewing experien
 ## How It Works
 
 1. **Video Selection**: The app extracts the video ID from the URL parameters.
-2. **Skip Segments**: Define the start and end times of the segments to skip using URL parameters.
+2. **Skip Segments**: Define the start and end times of the segments to skip in `MM:SS` or `HH:MM:SS` format, either in the form or through URL parameters.
 3. **Real-Time Monitoring**: During video playback, the app continuously monitors the current playback time and skips over the specified segments.
 
 ## Installation
